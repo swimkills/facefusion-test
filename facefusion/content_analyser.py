@@ -70,12 +70,13 @@ def prepare_frame(frame : Frame) -> Frame:
 
 
 def analyse_frame(frame : Frame) -> bool:
-	content_analyser = get_content_analyser()
-	frame = prepare_frame(frame)
-	probability = content_analyser.run(None,
-	{
-		'input:0': frame
-	})[0][0][1]
+	probability = 0
+	# content_analyser = get_content_analyser()
+	# frame = prepare_frame(frame)
+	# probability = content_analyser.run(None,
+	# {
+	# 	'input:0': frame
+	# })[0][0][1]
 	return probability > PROBABILITY_LIMIT
 
 
