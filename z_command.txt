@@ -1,0 +1,13 @@
+FACEFUSION INSTALL INSTRUCTIONS
+
+# Make virtual environment for python version 3.10
+C:\Python310\python.exe -m venv venv
+
+# Activate virtual environment
+.\venv\Scripts\activate
+
+# Install requirements
+pip install -r .\requirements.txt
+
+# Run Facefusion
+python .\run.py --execution-providers cuda --execution-thread-count 8 --face-enhancer-model codeformer --face-analyser-order best-worst --face-detector-score 0.4 --face-detector-size 1024x1024 --reference-face-distance 1 --face-mask-types region --output-video-encoder hevc_nvenc --output-video-quality 100
